@@ -11,7 +11,8 @@
     "react": "16.3.1",
     "react-native": "0.55.3",
     "react-native-elements": "^0.19.1",
-    "react-native-vector-icons": "^4.6.0"
+    "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^2.0.0-rc.9"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
@@ -24,7 +25,7 @@
   },
   "rnpm": {
     "assets": [
-      "./fonts/Roboto" 
+      "./fonts/Roboto"
     ]
   }
 }
