@@ -59,7 +59,7 @@ export default class MainContext extends Component {
       isVisibility: !this.state.isVisibility,
     });
   }
-  
+
   render() {
     const checkBoxChecked = require('../loginPage-assets/loginPage-checkbox-checked.png');
     const checkBoxUncheck = require('../loginPage-assets/loginPage-checkbox-unchecked.png');
@@ -130,8 +130,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginLeft: scale(20), //30
     marginRight: scale(20),
-    marginTop: verticalScale(190), //220
-    marginBottom: verticalScale(190),  //240
+    // marginTop: verticalScale(190), //220
+    // marginBottom: verticalScale(185),  //240
+    marginTop: '17%', //220
+    marginBottom: '2%',  //240
   },
   content: {
     marginTop: '4.5%', //10
@@ -151,11 +153,11 @@ const styles = StyleSheet.create({
     margin: '1.5%', //5
   },
   inputBox: {
-    height: verticalScale(40), //36
+    height: verticalScale(41), //36
     padding: scale(4), //4
     marginBottom: verticalScale(12), //5
     flexGrow: 1,
-    fontSize: moderateScale(14, 2), //14,2
+    fontSize: moderateScale(16, 1.5), //14,2
     borderWidth: 1,
     borderColor: '#acb7b1',
     borderRadius: 8,
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
   },
   textBold: {
     fontWeight: 'bold',
-    fontSize: moderateScale(13, 1.5),
+    fontSize: moderateScale(14, 1.5),
     alignSelf: 'flex-start',
     paddingBottom: moderateScale(5, 1), //5
   },
@@ -184,7 +186,7 @@ const styles = StyleSheet.create({
   },
   textCheckBox: {
     marginLeft: scale(5),
-    fontSize: moderateScale(13, 1.5),
+    fontSize: moderateScale(14, 1.5),
   },
   footer: {
     paddingBottom: moderateScale(8, 1), //5
@@ -197,14 +199,17 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     backgroundColor: '#da2032',
-    borderRadius: 10,
+    borderRadius: 4.5,
     marginLeft: '30%',
     marginRight: '30%',
   },
   loginButtonText: {
     textAlign: 'center',
-    fontSize: moderateScale(14, 2),
-    padding: '5%',
+    fontSize: moderateScale(15, 2),
+    paddingLeft: '10%',
+    paddingRight: '10%',
+    paddingTop: '5%',
+    paddingBottom: '5%',
     color: 'white',
     fontWeight: 'bold',
   },

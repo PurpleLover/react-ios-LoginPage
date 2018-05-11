@@ -26,3 +26,18 @@ behavior='position' contentContainerStyle={{ flexGrow: 2 }} keyboardVerticalOffs
       }
     });
   }
+
+  style={[
+          styles.containerFluid,
+        ]}
+        behavior='position'
+        contentContainerStyle={{
+          flex: 1,
+        }}
+        keyboardVerticalOffset={verticalScale(-180)}
+
+
+        123456
+
+
+        react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug
