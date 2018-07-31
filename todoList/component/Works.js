@@ -13,6 +13,13 @@ import { connect } from 'react-redux';
 import { toggleCompleted } from '../redux/actionCreator';
 
 class Works extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isShow: false,
+    };
+  }
+
   render() {
     const { id, name, deadline, completed } = this.props.myWork;
     const checkBoxCircle = completed ?
@@ -26,6 +33,9 @@ class Works extends Component {
         name='checkbox-blank-circle-outline'
       />;
     const textStyle = completed ? 'line-through' : 'none';
+    const showChildren = this.state.isShow ? <View>
+      <Text>Something here</Text>
+    </View> : null;
 
     return (
       <View style={styles.container} >
@@ -36,18 +46,19 @@ class Works extends Component {
           {checkBoxCircle}
         </TouchableOpacity>
         <View>
-          <Text style={{textDecorationLine: textStyle}}>{name}</Text>
+          <Text style={{ textDecorationLine: textStyle }}>{name}</Text>
           <Text>{deadline}</Text>
         </View>
         <TouchableOpacity
           style={styles.viewMore}
-          onPress={() => {}}
+          onPress={() => this.setState({isShow: !this.state.isShow})}
         >
           <Icon
             type='ionicon'
             name='ios-arrow-forward'
           />
         </TouchableOpacity>
+        {showChildren}
       </View>
     )
   }
